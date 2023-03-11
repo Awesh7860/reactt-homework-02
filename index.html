@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    #root{
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        width: 30%;
+        height:70% ;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .upper{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .image{
+        width:100px ;
+        height: 100px;
+        border-radius: 50%;
+        background-image: url(./awseh.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+     h2{
+        color: rgb(108, 107, 107);
+    }
+    p{
+        color: gray;
+    }
+    .middle{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .left,.mid,.right{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    h3{
+        color: purple;
+    }
+    h4{
+        color: gray;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .lower{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .btn1{
+        width: 35%;
+        height: 35%;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background-color: rgb(189, 3, 189);
+        color: white;
+    }
+    .btn2{
+        width: 35%;
+        height: 35%;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background-color:crimson;
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        let card=React.createElement('div',{className:"card"},
+        [
+        React.createElement('div',{className:"upper"},[
+            React.createElement('div',{className:"image"},null),
+            React.createElement('h2',{classNam:"myname"},"Awesh Ahamad Khan"),
+            React.createElement('p',{className:"hobby"},"I enjoy biking everyday at mid-night")
+        ]),
+        React.createElement('div',{className:"middle"},
+        [
+         React.createElement('div',{className:"left"},[
+        React.createElement('h3',null,"172"),
+        React.createElement('h4',null,"Posts")
+         ]),
+          React.createElement('div',{className:"mid"},[
+        React.createElement('h3',null,"450"),
+        React.createElement('h4',null,"Followers")
+         ]),
+          React.createElement('div',{className:"right"},[
+        React.createElement('h3',null,"150"),
+        React.createElement('h4',null,"Following")
+         ])
+        ]),
+        React.createElement('div',{className:"lower"},
+        [
+            React.createElement('button',{className:"btn1"},"FOLLOW"),
+            React.createElement('button',{className:"btn2"},"MESSAGE")
+        ])
+        ])
+
+        ReactDOM.render(card,document.getElementById("root"))
+    </script>
+</body>
+</html>
